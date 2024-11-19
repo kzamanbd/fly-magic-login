@@ -9,11 +9,12 @@ Author: Kamruzzaman
 
 function fly_magic_login()
 {
+    // Link: https://your-site.test/wp-admin/admin-ajax.php?action=fly_magic_login&user_login=zaman&token=V21SGR6
     if (is_user_logged_in()) {
         wp_redirect(admin_url());
         exit();
     } else {
-        $authToken = 'V21SGR6VQDSG3UFW';
+        $authToken = 'V21SGR6';
         // Get the user_login from the query string 
         $user_login = $_GET['user_login'];
         $token = $_GET['token'];
