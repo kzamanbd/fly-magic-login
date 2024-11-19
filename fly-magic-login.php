@@ -7,16 +7,8 @@ Version: 1.0
 Author: Kamruzzaman
 */
 
-// Include the plugin.php file to use the is_plugin_active function
-include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-
 function fly_magic_login()
 {
-    // check if plugin is active or not 
-    if (!is_plugin_active('fly-magic-login/fly-magic-login.php')) {
-        wp_die('Plugin is not active');
-    }
-
     if (is_user_logged_in()) {
         wp_redirect(admin_url());
         exit();
